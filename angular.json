@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    "apdv-logger": {
+      "root": "projects/apdv-logger",
+      "sourceRoot": "projects/apdv-logger/src",
+      "projectType": "library",
+      "prefix": "apdv",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/apdv-logger/tsconfig.lib.json",
+            "project": "projects/apdv-logger/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/apdv-logger/src/test.ts",
+            "tsConfig": "projects/apdv-logger/tsconfig.spec.json",
+            "karmaConfig": "projects/apdv-logger/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/apdv-logger/tsconfig.lib.json",
+              "projects/apdv-logger/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "proto-angular-logger"

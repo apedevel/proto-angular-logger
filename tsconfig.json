@@ -16,6 +16,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "apdv-logger": [
+        "dist/apdv-logger"
+      ],
+      "apdv-logger/*": [
+        "dist/apdv-logger/*"
+      ]
+    }
   }
 }
